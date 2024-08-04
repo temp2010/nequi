@@ -47,3 +47,5 @@ Tener Maven instalado. Ejecuta el siguiente comando para compilar y empaquetar l
 2. Definir una Tarea 
 3. Ejecutar el Contenedor
 4. Configurar el Balanceador de Carga (opcional)
+
+![get](https://github.com/user-attachments/assets/8b3f8b71-803e-41df-8eac-9265a1d21bb3)
