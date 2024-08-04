@@ -1,8 +1,8 @@
 spring:
   r2dbc:
-    url: r2dbc:postgresql://localhost:5432/franchise
-    username: franchise
-    password: oQC2dHYEK4gc2zvrJfDM
+    url: r2dbc:postgresql://${DB_HOST:host.docker.internal}:${DB_PORT:5432}/${DB_NAME:franchise}
+    username: ${DB_USERNAME:franchise}
+    password: ${DB_PASSWORD}
   data:
     r2dbc:
       repositories:

@@ -4,6 +4,8 @@ import com.nequi.franchise_api.entities.Product;
 import com.nequi.franchise_api.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @RestController
@@ -35,6 +37,11 @@ public class ProductController {
     @PutMapping("/{id}/stock")
     public Mono<Product> updateProductStock(@PathVariable Long id, @RequestBody Integer newStock) {
         return productService.updateProductStock(id, newStock);
+    }
+
+    @GetMapping(value = "/franchise/{franchiseId}/top-stock")
+    public Flux<Product> getTopProductsByBranchForFranchise(@PathVariable Long franchiseId) {
+        return productService.getTopProductsByBranchForFranchise(franchiseId);
     }
 
 }
